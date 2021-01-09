@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+  namespace: spoon
+spec:
+  selector:
+    matchLabels:
+      app: mongodb
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+        - name: mongodb
+          image: mongo:4.4.3-bionic
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8081
+          envFrom:
+            - configMapRef:
+                name: mongodb-config
+          volumeMounts:
+            - mountPath: /data/db
+              name: mongodb
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "100m"
+            limits:
+              memory: "500Mi"
+              cpu: "1"
+        - name: mongodb-express
+          image: mongo-express:0.54.0
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8081
+          envFrom:
+            - configMapRef:
+                name: mongodb-express-config
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "100m"
+            limits:
+              memory: "500Mi"
+              cpu: "1"
+      volumes:
+        - name: mongodb
+          persistentVolumeClaim:
+            claimName: mongodb-pv-claim
+
