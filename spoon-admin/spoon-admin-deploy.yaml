@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - image: gcr.io/feisty-return-300415/spoon-admin:1
-        name: projector-fe
+        name: spoon-admin
         ports:
         - containerPort: 80
           protocol: TCP
