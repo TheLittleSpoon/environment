@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: spoon-admin
-  name: spoon-admin
+    app: spoon-frontend
+  name: spoon-frontend
   namespace: spoon
 spec:
   selector:
     matchLabels:
-      app: spoon-admin
+      app: spoon-frontend
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -17,11 +17,11 @@ spec:
   template:
     metadata:
       labels:
-        app: spoon-admin
+        app: spoon-frontend
     spec:
       containers:
-      - image: gcr.io/feisty-return-300415/spoon-admin:e300c87
-        name: spoon-admin
+      - image: gcr.io/feisty-return-300415/spoon-fe:1
+        name: spoon-frontend
         ports:
         - containerPort: 80
           protocol: TCP
