@@ -20,7 +20,7 @@ spec:
         app: spoon-admin
     spec:
       containers:
-      - image: gcr.io/feisty-return-300415/spoon-admin:85610fc
+      - image: gcr.io/feisty-return-300415/spoon-admin:e300c87
         name: spoon-admin
         ports:
         - containerPort: 80
