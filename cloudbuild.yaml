@@ -8,6 +8,8 @@ steps:
   #- '-f'
   #- 'spoon-backend'
   - '-f'
+  - 'spoon-frontend'
+  - '-f'
   - 'spoon-admin'
   - '-f'
   - 'mongodb'
@@ -55,6 +57,7 @@ steps:
     git fetch origin production && git checkout production && \
     git checkout $COMMIT_SHA spoon-admin/* && \
     git checkout $COMMIT_SHA spoon-backend/* && \
+    git checkout $COMMIT_SHA spoon-frontend/* && \
     git checkout $COMMIT_SHA cloudbuild.yaml && \
     # Commit the yaml file with a descriptive commit message
     git commit -m "Manifest from commit $COMMIT_SHA
@@ -73,6 +76,8 @@ steps:
   - 'apply'
   #- '-f'
   #- 'spoon-backend'
+  - '-f'
+  - 'spoon-frontend'
   - '-f'
   - 'spoon-admin'
   - '-f'

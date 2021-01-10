@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: spoon-backend
-  name: spoon-backend
+    app: spoon-frontend
+  name: spoon-frontend
   namespace: spoon
 spec:
   selector:
     matchLabels:
-      app: spoon-backend
+      app: spoon-frontend
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -17,13 +17,13 @@ spec:
   template:
     metadata:
       labels:
-        app: spoon-backend
+        app: spoon-frontend
     spec:
       containers:
-      - image: gcr.io/feisty-return-300415/spoon-be:1
-        name: spoon-be
+      - image: gcr.io/feisty-return-300415/spoon-fe:1
+        name: spoon-frontend
         ports:
-        - containerPort: 5000
+        - containerPort: 80
           protocol: TCP
         resources:
           requests:
