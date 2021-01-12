@@ -4,7 +4,7 @@ metadata:
   name: mongodb-express-config
   namespace: spoon
   labels:
-    app: mongodb
+    app: mongodb-express
 data:
   ME_CONFIG_MONGODB_ADMINUSERNAME: spoon
   ME_CONFIG_MONGODB_ADMINPASSWORD: sp00n
