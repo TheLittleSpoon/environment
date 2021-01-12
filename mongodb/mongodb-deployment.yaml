@@ -18,7 +18,7 @@ spec:
           image: mongo:4.4.3-bionic
           imagePullPolicy: "IfNotPresent"
           ports:
-            - containerPort: 8081
+            - containerPort: 27017
           envFrom:
             - configMapRef:
                 name: mongodb-config
