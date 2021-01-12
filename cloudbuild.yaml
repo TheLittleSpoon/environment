@@ -5,8 +5,8 @@ steps:
   id: Deploy
   args:
   - 'apply'
-  #- '-f'
-  #- 'spoon-backend'
+  - '-f'
+  - 'spoon-backend'
   - '-f'
   - 'spoon-frontend'
   - '-f'
@@ -74,8 +74,8 @@ steps:
   id: Deploy - Prod
   args:
   - 'apply'
-  #- '-f'
-  #- 'spoon-backend'
+  - '-f'
+  - 'spoon-backend'
   - '-f'
   - 'spoon-frontend'
   - '-f'
