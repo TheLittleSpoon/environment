@@ -20,7 +20,7 @@ spec:
         app: spoon-frontend
     spec:
       containers:
-      - image: gcr.io/feisty-return-300415/spoon-fe:1
+      - image: gcr.io/feisty-return-300415/spoon-fe:879f2cc
         name: spoon-frontend
         ports:
         - containerPort: 80
