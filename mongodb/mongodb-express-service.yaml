@@ -4,10 +4,10 @@ metadata:
   name: mongodb-express
   namespace: spoon
   labels:
-    app: mongodb
+    app: mongodb-express
 spec:
   type: LoadBalancer
   ports:
    - port: 8081
   selector:
-   app: mongodb
+   app: mongodb-express
