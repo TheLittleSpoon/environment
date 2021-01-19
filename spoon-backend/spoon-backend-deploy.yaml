@@ -23,7 +23,7 @@ spec:
       - image: gcr.io/feisty-return-300415/spoon-be:5586bbc
         name: projector-be
         ports:
-        - containerPort: 5000
+        - containerPort: 8000
           protocol: TCP
         resources:
           requests:
