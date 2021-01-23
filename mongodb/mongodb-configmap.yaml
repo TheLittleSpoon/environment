@@ -6,6 +6,6 @@ metadata:
   labels:
     app: mongodb
 data:
-  MONGO_DB_INIT_DATABASE: spoon
+  MONGO_INITDB_DATABASE: spoon
   MONGO_INITDB_ROOT_USERNAME: spoon
   MONGO_INITDB_ROOT_PASSWORD: sp00n
