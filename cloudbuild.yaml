@@ -71,7 +71,7 @@ steps:
     path: /root/.ssh
 
 # This step deploys the new version of our container image
-# in the hello-cloudbuild Kubernetes Engine cluster - Prod
+# in the hello-cloudbuild Kubernetes Engine cluster - Prod 
 - name: 'gcr.io/cloud-builders/kubectl'
   id: Deploy - Prod
   args:
