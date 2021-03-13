@@ -20,7 +20,7 @@ spec:
         app: spoon-admin
     spec:
       containers:
-      - image: gcr.io/project-ci-305121/spoon-admin:f17522a
+      - image: gcr.io/project-ci-305121/spoon-admin:10e1a28
         name: spoon-admin
         ports:
         - containerPort: 80
