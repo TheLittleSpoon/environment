@@ -20,7 +20,7 @@ spec:
         app: spoon-backend
     spec:
       containers:
-      - image: gcr.io/project-ci-305121/spoon-be:d43da69
+      - image: gcr.io/project-ci-305121/spoon-be:41b9ce3
         name: projector-be
         ports:
         - containerPort: 3000
