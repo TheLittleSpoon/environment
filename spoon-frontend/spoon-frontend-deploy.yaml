@@ -20,7 +20,7 @@ spec:
         app: spoon-frontend
     spec:
       containers:
-      - image: gcr.io/project-ci-305121/spoon-fe:026ae83
+      - image: gcr.io/project-ci-305121/spoon-fe:cb201b4
         name: spoon-frontend
         ports:
         - containerPort: 80
